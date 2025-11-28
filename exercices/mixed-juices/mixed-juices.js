@@ -11,18 +11,18 @@
  * @returns {number} time in minutes
  */
 export function timeToMixJuice(name) {
-  switch(name){
-    case 'Pure Strawberry Joy':
-      return 0.5
-    case 'Energizer':
-    case 'Green Garden':
-      return 1.5
-    case 'Tropical Island':
-      return 3
-    case 'All or Nothing':
-      return 5
+  switch (name) {
+    case "Pure Strawberry Joy":
+      return 0.5;
+    case "Energizer":
+    case "Green Garden":
+      return 1.5;
+    case "Tropical Island":
+      return 3;
+    case "All or Nothing":
+      return 5;
     default:
-      return 2.5
+      return 2.5;
   }
 }
 
@@ -36,23 +36,23 @@ export function timeToMixJuice(name) {
  */
 export function limesToCut(wedgesNeeded, limes) {
   let lime = 0;
-    while(wedgesNeeded > 0 && lime < limes.length - 1){
-      switch(limes[lime]){
-        case 'small':
-          wedgesNeeded -= 6
-          lime++
-          break;
-        case 'medium':
-          wedgesNeeded -= 8
-          lime++
-          break;
-        case 'large':
-          wedgesNeeded -= 10
-          lime++
-          break;
-      }
+  while (wedgesNeeded > 0 && lime < limes.length) {
+    switch (limes[lime]) {
+      case "small":
+        wedgesNeeded -= 6;
+        lime++;
+        break;
+      case "medium":
+        wedgesNeeded -= 8;
+        lime++;
+        break;
+      case "large":
+        wedgesNeeded -= 10;
+        lime++;
+        break;
     }
-  return lime
+  }
+  return lime;
 }
 /**
  * Determines which juices still need to be prepared after the end of the shift.
@@ -62,5 +62,9 @@ export function limesToCut(wedgesNeeded, limes) {
  * @returns {string[]} remaining orders after the time is up
  */
 export function remainingOrders(timeLeft, orders) {
-  throw new Error('Remove this line and implement the function');
+  while (timeLeft > 0 && orders.length > 0) {
+    timeLeft -= timeToMixJuice(orders[0]);
+    orders.splice(0, 1);
+  }
+  return orders;
 }
