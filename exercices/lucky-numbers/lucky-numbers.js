@@ -18,6 +18,7 @@ export function twoSum(array1, array2) {
  * @returns {boolean} whether the number is a palindrome or not
  */
 export function luckyNumber(value) {
+
   return String(value) === String(value).split("").reverse().join("");
 }
 
@@ -29,15 +30,34 @@ export function luckyNumber(value) {
  * @returns {string} error message
  */
 export function errorMessage(input) {
-  if (Boolean(input)){
-    if (!Number(input)){
-      return 'Must be a number besides 0'
+
+  const isNumber = Number(input);
+
+  // En convertissant l'entree en booleen, cela nous permet de gérer les cas null, undefined, NAN
+  // car toutes ses valeurs sont considéré comme falsy
+  if (!Boolean(input)) {
+    return 'Required field';
+  }
+
+  if(isNumber){
+    return '';
+  }
+
+  if(!isNumber){
+    return 'Must be a number besides 0';
+  }
+
+/*
+  if()
+  if (Number.isNaN(input)){
+    if (input === ''){
+    return 'Required field'
     }
-    else{
-      return ''
+    else {
+    return "Must be a number besides 0"
     }
   }
   else {
-    return 'Required field'
-  }
+    return ''
+  }*/
 }
