@@ -30,14 +30,14 @@ export function luckyNumber(value) {
  */
 export function errorMessage(input) {
   if (Boolean(input)){
-    if (input == ''){
-      return 'Required field'
-    }
-    else if (!Number(input)){
+    if (!Number(input)){
       return 'Must be a number besides 0'
     }
+    else{
+      return ''
+    }
   }
-  else{
-    return ""
+  else {
+    return 'Required field'
   }
 }
