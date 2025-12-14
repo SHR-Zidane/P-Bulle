@@ -67,10 +67,5 @@ export function simpleTicketStatus(tickets, ticketId) {
  * @returns {string | undefined} version
  */
 export function gtcVersion(visitor) {
-  if(Boolean(visitor.gtc.version)){
-    return visitor.gtc.version
-  }
-  else{
-    return undefined
-  }
+  return visitor.gtc?.version
 }
