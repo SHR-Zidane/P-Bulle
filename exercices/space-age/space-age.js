@@ -3,16 +3,24 @@
 // convenience to get you started writing code faster.
 //
 
-export const age = () => {
+export const age = (planet, age) => {
   const planetsAge = {
-    Mercury:  0.2408467, 
-    Venus: 0.61519726, 
-    Earth: 1.0, 
-    March: 1.8808158,
-    Jupiter: 11.862615 ,
-    Saturn: 29.447498 ,
-    Uranus: 84.016846 ,
-    Neptune: 164.79132
+    mercury:  0.2408467, 
+    venus: 0.61519726, 
+    earth: 1.0, 
+    mars: 1.8808158,
+    jupiter: 11.862615 ,
+    saturn: 29.447498 ,
+    uranus: 84.016846 ,
+    neptune: 164.79132
   };
-  
+  const namePlanet = planetsAge[planet]
+  if (!namePlanet){
+    throw new Error("not a planet");
+  }
+  else{
+  const resultage = age/ (31557600 * namePlanet)
+
+  return Number(resultage.toFixed(2))
+  }
 };
