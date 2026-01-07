@@ -23,22 +23,16 @@ export function cardTypeCheck(stack, card) {
  * Determine how many cards are odd or even
  *
  * @param {number[]} stack
- * @param {boolean} type the type of value to check for - odd or even
+ * @param {boolean} type the type of value to check for - impair ou pair
  * @returns {number} number of cards that are either odd or even (depending on `type`)
  */
 export function determineOddEvenCards(stack, type) {
   // 🚨 Use a `for...of` loop
   let count = 0
-  for (const p of stack){
-    if (type){
-      if (p % 2 == 0){
-        count++
-      }
-    }
-    else {
-      if (!(p % 2 == 0)){
-        count++
-      }
+  for (const n of stack){
+    const isEven = n % 2 === 0;
+    if (isEven === type){
+      count++
     }
   }
   return count
