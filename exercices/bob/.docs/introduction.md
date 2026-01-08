@@ -1,10 +1,10 @@
 # Introduction
 
-Bob is a [lackadaisical][] teenager.
-He likes to think that he's very cool.
-And he definitely doesn't get excited about things.
-That wouldn't be cool.
+Bob est un adolescent [nonchalant][].
+Il aime penser qu'il est très cool.
+Et il n'est certainement pas excité par les choses.
+Ce ne serait pas cool.
 
-When people talk to him, his responses are pretty limited.
+Quand les gens lui parlent, ses réponses sont assez limitées.
 
 [lackadaisical]: https://www.collinsdictionary.com/dictionary/english/lackadaisical
