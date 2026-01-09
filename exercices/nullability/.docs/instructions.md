@@ -1,17 +1,16 @@
 # Instructions
 
-While working for a factory, a need arises to create the printed message on employee badges. You decide to implement this function in JavaScript.
+Lorsque vous travaillez pour une usine, il devient nécessaire de créer le message imprimé sur les badges des employés. Vous décidez d'implémenter cette fonction en JavaScript.
 
-A badge requires the `id` of the employee, the `name` of the employee, as well as the department in which they are working.
+Un badge nécessite l'« identifiant » de l'employé, le « nom » de l'employé, ainsi que le service dans lequel il travaille.
 
-## 1. Create the badge text
+## 1. Créez le texte du badge
 
-Implement a function named `printBadge` that returns the text to print on the badge.
+Implémentez une fonction nommée `printBadge` qui renvoie le texte à imprimer sur le badge.
 
-The employee's name is always provided, but the employee `id` number and department name may be `null`. The employee `id` number, if provided, should be between square brackets (e.g. `[20]`).
+Le nom de l'employé est toujours fourni, mais le numéro d'identification de l'employé et le nom du service peuvent être « nuls ». Le numéro « id » de l'employé, s'il est fourni, doit être entre crochets (par exemple « [20] »).
 
-An owner's badge should not have an `id` or `department`.
-
+Le badge d'un propriétaire ne doit pas avoir d'identifiant ou de département.
 ```javascript
 printBadge(20, 'Bob', 'Marketing');
 // => '[20] Bob - MARKETING'
