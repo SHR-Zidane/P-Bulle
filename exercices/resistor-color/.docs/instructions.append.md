@@ -1,3 +1,3 @@
-# Instructions append
+# Instructions ajoutées
 
-Although the color names are capitalised in the description, the function colorCode will always be called with the lowercase equivalent, e.g brown instead of Brown
+Bien que les noms des couleurs soient en majuscules dans la description, la fonction colorCode sera toujours appelée avec son équivalent en minuscule, par exemple marron au lieu de Marron

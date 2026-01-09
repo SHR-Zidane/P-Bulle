@@ -3,8 +3,7 @@
 // convenience to get you started writing code faster.
 //
 
-export const colorCode = () => {
-  throw new Error('Remove this line and implement the function');
-};
-
-export const COLORS = undefined;
+export const colorCode = (color) => {
+  return COLORS.indexOf(color.toLowerCase())
+}
+export const COLORS = ['black', 'brown', 'red', 'orange', 'yellow', 'green', 'blue', 'violet', 'grey', 'white'];
